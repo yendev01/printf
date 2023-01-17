@@ -13,7 +13,15 @@ int print_i(va_list input);
 int print_d(va_list input);
 int print_b(va_list input);
 
-typedef struct myStruct {
+/**
+  * struct myStruct - ...
+  * @c: ..
+  * @func: ...
+  * Description: mystruct
+  */
+
+typedef struct myStruct
+{
 	char *c;
 	int (*func)(va_list);
 } lfg;

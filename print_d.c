@@ -2,7 +2,7 @@
 
 int print_dec(int integer, int m, int count);
 /**
-  * print_i - function
+  * print_d - function
   * @input: ...
   * Return: returns int
   */
@@ -32,7 +32,7 @@ int print_d(va_list input)
 }
 
 /**
-  * print_int -function
+  * print_dec -function
   * @integer: ..
   * @count: ...
   * @m: ...
