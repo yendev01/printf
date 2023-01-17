@@ -10,9 +10,10 @@
 int print_b(va_list input)
 {
 	int i, count = 0;
-	unsigned long int num, integer;
+	int num,i;
+	unsigned int integer;
 
-	integer = va_arg(input, int);
+	integer = va_arg(input, unsigned int);
 
 	for (i = 63; i >= 0; i--)
 	{
@@ -35,7 +36,7 @@ int print_b(va_list input)
 		}
 
 	}
-	if (count == 0)
+	if (count == 0 | integer == 0)
 	{
 		_putchar('0');
 		count++;
