@@ -10,7 +10,7 @@
 int print_b(va_list input)
 {
 	int i, count = 0;
-	int num,i;
+	int num;
 	unsigned int integer;
 
 	integer = va_arg(input, unsigned int);
@@ -36,7 +36,7 @@ int print_b(va_list input)
 		}
 
 	}
-	if (count == 0 | integer == 0)
+	if ((count == 0) | (integer == 0))
 	{
 		_putchar('0');
 		count++;
