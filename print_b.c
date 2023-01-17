@@ -10,12 +10,11 @@
 int print_b(va_list input)
 {
 	int i, count = 0;
-	int num;
-	unsigned int integer;
+	unsigned int integer, num;
 
 	integer = va_arg(input, unsigned int);
 
-	for (i = 63; i >= 0; i--)
+	for (i = (sizeof(integer) * 8); i >= 0; i--)
 	{
 		num = integer >> i;
 		if (num & 1)
@@ -36,7 +35,7 @@ int print_b(va_list input)
 		}
 
 	}
-	if ((count == 0) | (integer == 0))
+	if (count == 0)
 	{
 		_putchar('0');
 		count++;
