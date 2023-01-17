@@ -12,9 +12,9 @@ int print_b(va_list input)
 	int i, count = 0;
 	unsigned long int num, integer;
 
-	integer = va_arg(input, unsigned long int);
+	integer = va_arg(input, int);
 
-	for (i = sizeof(integer) * 8; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 		num = integer >> i;
 		if (num & 1)
