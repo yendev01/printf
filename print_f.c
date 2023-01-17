@@ -7,13 +7,11 @@
   */
 int _printf(const char *format, ...)
 {
-	int count = 0;
 	va_list args;
-	int (*p)(va_list);
+	int (*p)(va_list), count = 0;
 
 	va_start(args, format);
-	
-	while(*format)
+	while (*format)
 	{
 		if (*format && *format != '%')
 		{
@@ -22,13 +20,11 @@ int _printf(const char *format, ...)
 		}
 		if (*format == '\0')
 			return (count);
-
 		if (*format == '%')
 		{
 			format++;
 			if (*format == '\0')
 				return (count);
-
 			else if (*format == '%')
 			{
 				_putchar('%');
@@ -37,7 +33,6 @@ int _printf(const char *format, ...)
 			else
 			{
 				p = get_whattoprint(format);
-
 				if (p != NULL)
 					count += p(args);
 				else
@@ -50,7 +45,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-
 	va_end(args);
-	return(count);
+	return (count);
 }
